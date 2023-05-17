@@ -1,0 +1,36 @@
+.product-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 16px;
+  }
+  
+  .product-card {
+    background-color:black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  .product-card img {
+    background-color: aliceblue;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .product-info {
+    padding: 20px;
+  }
+  
+  .product-info h4 {
+    margin-top: 0;
+  }
+  
+  .product-info p:last-of-type {
+    margin-bottom: 0;
+  }
+  

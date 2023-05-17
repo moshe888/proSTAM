@@ -1,0 +1,27 @@
+.promotion-notification-wrapper {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.promotion-notification {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.close-button {
+  border: none;
+  background-color: transparent;
+  color: #999;
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

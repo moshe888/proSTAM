@@ -1,0 +1,104 @@
+.product-management {
+  display: flex;
+  color: #5c4d67;
+  padding: 20px;
+}
+
+.product-management__form {
+   padding: 20px;
+  border-radius: 5px;
+  margin-right: 20px ;
+  margin-left: 20px;
+  width: 200px;
+}
+
+.product-management__form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-management__form label {
+  font-weight: bold;
+}
+
+.product-management__form input,
+.product-management__form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.product-management__form button {
+  background-color: #5c4d67;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product-management__list {
+  flex-grow: 1;
+}
+
+.product-management__list h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-management__message {
+  color: #666565;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-management__product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-management__product-item {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.product-management__product-item-inner {
+  display: flex;
+}
+
+.product-management__product-item-image {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.product-management__product-item-image img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.product-management__product-item-details {
+  flex-grow: 1;
+}
+
+.product-management__product-item h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.product-management__product-item p {
+  margin: 0;
+}
+
+.product-management__product-item button {
+  background-color: #5c4d67;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
