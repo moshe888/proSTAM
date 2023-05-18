@@ -93,7 +93,7 @@ router.post('/send-email', async (req, res) => {
     auth: {
       user: 'projectstamweb@gmail.com',
       // pass: 'eiseecoixpzfople',
-      pass:'As118811'
+      pass:'ehmvfwfdgzaduwot'      
     },
   });
 
