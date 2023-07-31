@@ -26,13 +26,15 @@ function AddAuthor() {
 
   const sendPasswordByEmail = async (email, password) => {
     try {
-      alert(`a1`);
+
+      alert(`מעבד את הבקשה...`);
+      alert('הסיסמה שלך היא ' + password);
 
       await axios.post('http://localhost:3000/stores/send-email', { email, password });
  
-      console.log('Password sent successfully!');
+      console.log(' הסיסמה נשלחה בהצלחה למייל: ', email);
     } catch (error) {
-      alert(`a2`);
+      alert(` שגיאה בשליחת הסיסמה למייל: ${email}`);
 
       console.log(error.message);
     }

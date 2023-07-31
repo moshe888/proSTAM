@@ -91,18 +91,20 @@ router.post('/send-email', async (req, res) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'projectstamweb@gmail.com',
+      user: 'mailstammailstam@gmail.com',
       // pass: 'eiseecoixpzfople',
-      pass:'ehmvfwfdgzaduwot'      
+      pass:'opxrsyohcgnimakx',      
     },
   });
 
   // Define the email options
   const mailOptions = {
-    from: 'projectstamweb@gmail.com',
+    from: 'mailstammailstam@gmail.com',
     to: email,
-    subject: 'Welcome to Our Store',
-    text: `Your password is: ${password}`,
+    subject: "ברוכים הבאים לאתר שלנו"
+    ,
+    text: `שלום וברוכים הבאים לאתר שלנו, כדי להתחבר לאתר יש להשתמש בסיסמה הבאה: ${password}`,
+    
   };
 
   try {

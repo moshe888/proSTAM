@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./Store.css";
+import { FaShoppingCart } from "react-icons/fa";
 import PayPalButton from "./PayPalButton";
 
 const Store = () => {
@@ -46,13 +47,12 @@ const Store = () => {
   }
 
   return (
-    <div>
-      {/* PayPal Button at the top of the page */}
-    
+    <div className="store-container">
 
-      <h2>{store.name}</h2>
-      <p>{store.description}</p>
-      <h3>Products:</h3>
+      <div className="store-details">
+        <h2>{store.name}</h2>
+        <p>{store.description}</p>
+      </div>
       <div className="product-table">
         {store.products.map((product) => (
           <div className="product-card" key={product._id}>
@@ -61,13 +61,15 @@ const Store = () => {
               <h4>{product.name}</h4>
               <p>{product.description}</p>
               <p>Price: ${product.price.toFixed(2)}</p>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
+              <button className="button primary-button" onClick={() => addToCart(product)}>
+                Add to Cart <FaShoppingCart />
+              </button>
             </div>
           </div>
         ))}
       </div>
-      <h3>Shopping Cart:</h3>
-      <div className="cart-items">
+      <div className="shopping-cart">
+         <h3 style=   {{color: "bla"}}>Shopping Cart</h3>
         {cartItems.length === 0 ? (
           <p>No items in the cart.</p>
         ) : (
@@ -77,19 +79,24 @@ const Store = () => {
                 <div className="cart-item">
                   <h4>{item.name}</h4>
                   <p>Price: ${item.price.toFixed(2)}</p>
-                  <button onClick={() => removeFromCart(item._id)}>Remove</button>
+                  <button className="button danger-button" onClick={() => removeFromCart(item._id)}>
+                    Remove
+                  </button>
                 </div>
               </li>
             ))}
           </ul>
         )}
-      </div>
-      {cartItems.length > 0 && (
-        <div className="total-price">
-          <p>Total Price: ${totalPrice.toFixed(2)}</p>
-        </div>
-      )}
+        {cartItems.length > 0 && (
+          <div className="total-price">
+            <p>Total Price: ${totalPrice.toFixed(2)}</p>
+          </div>
+          
+        )}
+              <div className="paypal-button">
         <PayPalButton amount={totalPrice} />
+      </div>
+      </div>
     </div>
   );
 };
