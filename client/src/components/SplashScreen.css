@@ -1,0 +1,35 @@
+/* Add this to your App.css or create a separate CSS file for styling */
+.splash-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Set your desired background color */
+    font-size: 24px;
+    opacity: 0; /* Start with the splash screen hidden */
+    animation: fadeOut 1s ease-in-out forwards; /* Apply the fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* New fade-out animation */
+  .fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  

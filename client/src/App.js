@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import AuthorsList from './components/AuthorsList';
 import Store from './components/Store';
@@ -8,10 +8,27 @@ import Admin from './components/Admin';
 import Login from './components/Login';
 import ProductManagement from './components/ProductManagement';
 import PromotionNotification from './components/PromotionNotification'; // Import the PromotionNotification component
-
+import SplashScreen from './components/SplashScreen';
 import './App.css';
 
 function App() {
+  const [isPromotionActive, setIsPromotionActive] = React.useState(true); // Add a state variable to hold the promotion status
+  const [isLoading, setIsLoading] = useState(true); // Add a state variable to track if the application is loading
+  // Simulate an asynchronous operation (e.g., fetching data, loading assets)
+  useEffect(() => {
+    // After a certain time (simulated with setTimeout), set isLoading to false
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000); // Change the timeout value to control the duration of the splash screen
+
+    // Clean up the timer when the component unmounts
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Render the splash screen until the isLoading state becomes false
+  if (isLoading) {
+    return <SplashScreen />;
+  }
   return (
     <Router >
       <div className="App"  dir="rtl">

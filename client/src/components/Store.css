@@ -1,4 +1,4 @@
-.product-table {
+ .product-table {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -32,5 +32,35 @@
   
   .product-info p:last-of-type {
     margin-bottom: 0;
+  }
+   
+   .paypal-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .paypal-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0070ba;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .paypal-button:hover {
+    background-color: #00457c;
+  }
+  
+  .paypal-icon {
+    font-size: 24px;
+    margin-right: 10px;
   }
   
